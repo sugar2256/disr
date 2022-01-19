@@ -1,0 +1,4 @@
+discord.py==21.1.1
+asyncio.py==21.1.1
+datetime.py==21.1.1
+pytz.py==21.1.1
