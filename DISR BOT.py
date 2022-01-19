@@ -1,5 +1,6 @@
 from pydoc import cli
 import discord, asyncio, datetime, pytz
+import os
 client = discord.Client() 
 
 @client.event
@@ -79,5 +80,5 @@ async def on_message(message):
         if i is False:
             await message.channel.send("{}, 당신은 관리자가 아닙니다".format(message.author.mention))
 
-# 봇을 실행시키기 위한 토큰을 작성해주는 곳
-client.run('OTMzMjA2NjM1MDAwNzc0NzA4.YeeKZw.SOCxMovTsn0AhHN4SF5LqsjVVhM')
+access_token = os.environ["BOT_TOKEN"]
+client.run(access_token)
